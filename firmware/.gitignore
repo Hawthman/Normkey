@@ -1,0 +1,8 @@
+normkey.eep
+normkey.elf
+normkey.hex
+normkey.lss
+normkey.map
+normkey.sym
+obj_normkey/
+.dep/
