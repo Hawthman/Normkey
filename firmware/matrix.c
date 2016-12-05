@@ -21,6 +21,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <stdint.h>
 #include <stdbool.h>
 #include <avr/io.h>
+#include <i2cmaster.h>
 #include <util/delay.h>
 #include "print.h"
 #include "debug.h"
@@ -28,19 +29,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "matrix.h"
 
 
-#ifndef DEBOUNCE
-#   define DEBOUNCE	5
-#endif
-static uint8_t debouncing = DEBOUNCE;
-
 /* matrix state(1:on, 0:off) */
 static matrix_row_t matrix[MATRIX_ROWS];
-static matrix_row_t matrix_debouncing[MATRIX_ROWS];
 
-static matrix_row_t read_cols(void);
-static void init_cols(void);
-static void unselect_rows(void);
-static void select_row(uint8_t row);
+static matrix_row_t read_cols(uint8_t device);
+static void select_row(uint8_t device, uint8_t row);
 
 
 inline
@@ -55,46 +48,65 @@ uint8_t matrix_cols(void)
     return MATRIX_COLS;
 }
 
+#define IODIRA 0x00
+#define IODIRB 0x01
+#define GPPUA 0x0C
+#define GPPUB 0x0D
+#define GPIOA  0x12
+#define GPIOB  0x13
+
+#define DEVICE1 0x40
+#define DEVICE2 0x42
+
+#define TWI_FREQ 400000
+
+static void configure_device(uint8_t device) {
+  i2c_start_wait(device | I2C_WRITE);
+  i2c_write(IODIRA);
+  i2c_write(0x00);
+  i2c_stop();
+
+  i2c_start_wait(device | I2C_WRITE);
+  i2c_write(GPPUB);
+  i2c_write(0xff);
+  i2c_stop();
+}
+
 void matrix_init(void)
 {
     debug_enable = true;
     debug_matrix = true;
     debug_mouse = true;
-    // initialize row and col
-    unselect_rows();
-    init_cols();
 
     // initialize matrix state: all keys off
     for (uint8_t i=0; i < MATRIX_ROWS; i++) {
         matrix[i] = 0;
-        matrix_debouncing[i] = 0;
     }
+
+    // i2c setup
+    i2c_init();
+    TWBR = ((F_CPU / TWI_FREQ) - 16) / 2;
+
+    configure_device(DEVICE1);
+    configure_device(DEVICE2);
 }
+
+bool was_changed = false;
 
 uint8_t matrix_scan(void)
 {
-    for (uint8_t i = 0; i < MATRIX_ROWS; i++) {
-        select_row(i);
-        _delay_us(30);  // without this wait read unstable value.
-        matrix_row_t cols = read_cols();
-        if (matrix_debouncing[i] != cols) {
-            matrix_debouncing[i] = cols;
-            if (debouncing) {
-                debug("bounce!: "); debug_hex(debouncing); debug("\n");
-            }
-            debouncing = DEBOUNCE;
-        }
-        unselect_rows();
-    }
+    was_changed = false;
+    const int rows_per_side = MATRIX_ROWS / 2;
+    for (uint8_t i = 0; i < rows_per_side; i++) {
+        select_row(DEVICE1, i);
+        select_row(DEVICE2, i);
 
-    if (debouncing) {
-        if (--debouncing) {
-            _delay_ms(1);
-        } else {
-            for (uint8_t i = 0; i < MATRIX_ROWS; i++) {
-                matrix[i] = matrix_debouncing[i];
-            }
-        }
+        matrix_row_t c1 = read_cols(DEVICE1);
+        matrix_row_t c2 = read_cols(DEVICE2);
+
+        was_changed = was_changed || (matrix[0*rows_per_side + i] != c1) || (matrix[1*rows_per_side + i] != c2);
+        matrix[0*rows_per_side + i] = c1;
+        matrix[1*rows_per_side + i] = c2;
     }
 
     return 1;
@@ -102,8 +114,8 @@ uint8_t matrix_scan(void)
 
 bool matrix_is_modified(void)
 {
-    if (debouncing) return false;
-    return true;
+    /* FIXME */
+    return was_changed;
 }
 
 inline
@@ -137,46 +149,21 @@ uint8_t matrix_key_count(void)
     return count;
 }
 
-/* Column pin configuration
- * col: 0
- * pin: B0
- */
-static void  init_cols(void)
+static matrix_row_t read_cols(uint8_t device)
 {
-    // Input with pull-down(DDR:0, PORT:0)
-    DDRF  &= ~(0x7f);
-    PORTF &= ~(0x7f);
+    i2c_start_wait(device | I2C_WRITE);
+    i2c_write(GPIOB);
+    i2c_rep_start(device | I2C_READ);
+    uint8_t ret = i2c_readNak();
+    i2c_stop();
+
+    return ~ret;
 }
 
-static matrix_row_t read_cols(void)
+static void select_row(uint8_t device, uint8_t row)
 {
-    return (PINF & 0x7f);
-}
-
-/* Row pin configuration
- * row: 0
- * pin: B1
- */
-static void unselect_rows(void)
-{
-    // Hi-Z(DDR:0, PORT:0) to unselect
-    DDRB  = 0;
-    PORTB = 0;
-    DDRC  = 0;
-    PORTC = 0;
-}
-
-static void select_row(uint8_t row)
-{
-    DDRB  = 0x3f;
-    DDRC  = 0x3f;
-
-    // Output high(DDR:1, PORT:1) to select
-    if(row < 6) {
-        PORTB = 0;
-        PORTC = 1 << row;
-    } else if(row < 12) {
-        PORTB = 1 << (row - 6);
-        PORTC = 0;
-    }
+    i2c_start_wait(device | I2C_WRITE);
+    i2c_write(GPIOA);
+    i2c_write((uint8_t)~(1 << row));
+    i2c_stop();
 }
