@@ -50,7 +50,8 @@ TARGET_DIR = .
 # project specific files
 SRC =	keymap.c \
 	matrix.c \
-	led.c
+	led.c \
+	lib/i2cmaster/twimaster.c
 
 CONFIG_H = config.h
 
@@ -90,6 +91,7 @@ PROGRAM_CMD = teensy_loader_cli -mmcu=$(MCU) -w -v $(TARGET).hex
 
 # Search Path
 VPATH += $(TARGET_DIR)
+VPATH += $(TARGET_DIR)/lib/i2cmaster
 VPATH += $(TMK_DIR)
 
 include $(TMK_DIR)/protocol/pjrc.mk
