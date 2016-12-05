@@ -83,9 +83,10 @@ F_CPU = 16000000
 #NKRO_ENABLE = yes	# USB Nkey Rollover
 
 
+OPT_DEFS += -DBOOTLOADER_SIZE=4096
 
 #---------------- Programming Options --------------------------
-PROGRAM_CMD = teensy_loader_cli -mmcu=$(MCU) -w -v $(TARGET).hex
+PROGRAM_CMD = avrdude -c usbtiny -p $(MCU) -U flash:w:$(TARGET).hex
 
 
 
