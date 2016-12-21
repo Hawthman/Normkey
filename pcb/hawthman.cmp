@@ -1,0 +1,523 @@
+Cmp-Mod V01 Created by PcbNew   date = Tue Dec 20 18:32:31 2016
+
+BeginCmp
+TimeStamp = 584D3BCB
+Path = /57C28499
+Reference = SW1;
+ValeurCmp = SW_PUSH;
+IdModule  = Keyboard:CHERRY_PCB_100H;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3C1C
+Path = /57C284A9
+Reference = SW10;
+ValeurCmp = SW_PUSH;
+IdModule  = Keyboard:CHERRY_PCB_100H;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3BE6
+Path = /57C284BD
+Reference = SW4;
+ValeurCmp = SW_PUSH;
+IdModule  = Keyboard:CHERRY_PCB_100H;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3BD4
+Path = /57C284A5
+Reference = SW2;
+ValeurCmp = SW_PUSH;
+IdModule  = Keyboard:CHERRY_PCB_100H;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3B1E
+Path = /57C2849A
+Reference = D1;
+ValeurCmp = D;
+IdModule  = Keyboard:DIODE;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3B24
+Path = /57C284A6
+Reference = D2;
+ValeurCmp = D;
+IdModule  = Keyboard:DIODE;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3B2A
+Path = /57C284B2
+Reference = D3;
+ValeurCmp = D;
+IdModule  = Keyboard:DIODE;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3B30
+Path = /57C284BE
+Reference = D4;
+ValeurCmp = D;
+IdModule  = Keyboard:DIODE;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3B36
+Path = /57C2849C
+Reference = D5;
+ValeurCmp = D;
+IdModule  = Keyboard:DIODE;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3B3C
+Path = /57C284A8
+Reference = D6;
+ValeurCmp = D;
+IdModule  = Keyboard:DIODE;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3B42
+Path = /57C284B4
+Reference = D7;
+ValeurCmp = D;
+IdModule  = Keyboard:DIODE;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3B48
+Path = /57C284C0
+Reference = D8;
+ValeurCmp = D;
+IdModule  = Keyboard:DIODE;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3B4E
+Path = /57C2849E
+Reference = D9;
+ValeurCmp = D;
+IdModule  = Keyboard:DIODE;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3B54
+Path = /57C284AA
+Reference = D10;
+ValeurCmp = D;
+IdModule  = Keyboard:DIODE;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3B5A
+Path = /57C284B6
+Reference = D11;
+ValeurCmp = D;
+IdModule  = Keyboard:DIODE;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3B60
+Path = /57C284C2
+Reference = D12;
+ValeurCmp = D;
+IdModule  = Keyboard:DIODE;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3B66
+Path = /57C284A0
+Reference = D13;
+ValeurCmp = D;
+IdModule  = Keyboard:DIODE;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3B6C
+Path = /57C284AC
+Reference = D14;
+ValeurCmp = D;
+IdModule  = Keyboard:DIODE;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3B72
+Path = /57C284B8
+Reference = D15;
+ValeurCmp = D;
+IdModule  = Keyboard:DIODE;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3B78
+Path = /57C284C4
+Reference = D16;
+ValeurCmp = D;
+IdModule  = Keyboard:DIODE;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3B7E
+Path = /57C284A2
+Reference = D17;
+ValeurCmp = D;
+IdModule  = Keyboard:DIODE;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3B84
+Path = /57C284AE
+Reference = D18;
+ValeurCmp = D;
+IdModule  = Keyboard:DIODE;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3B8A
+Path = /57C284BA
+Reference = D19;
+ValeurCmp = D;
+IdModule  = Keyboard:DIODE;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3B90
+Path = /57C284C6
+Reference = D20;
+ValeurCmp = D;
+IdModule  = Keyboard:DIODE;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3B96
+Path = /57C284A4
+Reference = D21;
+ValeurCmp = D;
+IdModule  = Keyboard:DIODE;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3B9C
+Path = /57C284B0
+Reference = D22;
+ValeurCmp = D;
+IdModule  = Keyboard:DIODE;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3BA2
+Path = /57C284BC
+Reference = D23;
+ValeurCmp = D;
+IdModule  = Keyboard:DIODE;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3BA8
+Path = /57C284C8
+Reference = D24;
+ValeurCmp = D;
+IdModule  = Keyboard:DIODE;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3BDD
+Path = /57C284B1
+Reference = SW3;
+ValeurCmp = SW_PUSH;
+IdModule  = Keyboard:CHERRY_PCB_100H;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3BEF
+Path = /57C2849B
+Reference = SW5;
+ValeurCmp = SW_PUSH;
+IdModule  = Keyboard:CHERRY_PCB_100H;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3BF8
+Path = /57C284A7
+Reference = SW6;
+ValeurCmp = SW_PUSH;
+IdModule  = Keyboard:CHERRY_PCB_100H;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3C01
+Path = /57C284B3
+Reference = SW7;
+ValeurCmp = SW_PUSH;
+IdModule  = Keyboard:CHERRY_PCB_100H;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3C0A
+Path = /57C284BF
+Reference = SW8;
+ValeurCmp = SW_PUSH;
+IdModule  = Keyboard:CHERRY_PCB_100H;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3C13
+Path = /57C2849D
+Reference = SW9;
+ValeurCmp = SW_PUSH;
+IdModule  = Keyboard:CHERRY_PCB_100H;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3C25
+Path = /57C284B5
+Reference = SW11;
+ValeurCmp = SW_PUSH;
+IdModule  = Keyboard:CHERRY_PCB_100H;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3C2E
+Path = /57C284C1
+Reference = SW12;
+ValeurCmp = SW_PUSH;
+IdModule  = Keyboard:CHERRY_PCB_100H;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3C37
+Path = /57C2849F
+Reference = SW13;
+ValeurCmp = SW_PUSH;
+IdModule  = Keyboard:CHERRY_PCB_100H;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3C40
+Path = /57C284AB
+Reference = SW14;
+ValeurCmp = SW_PUSH;
+IdModule  = Keyboard:CHERRY_PCB_100H;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3C49
+Path = /57C284B7
+Reference = SW15;
+ValeurCmp = SW_PUSH;
+IdModule  = Keyboard:CHERRY_PCB_100H;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3C52
+Path = /57C284C3
+Reference = SW16;
+ValeurCmp = SW_PUSH;
+IdModule  = Keyboard:CHERRY_PCB_100H;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3C5B
+Path = /57C284A1
+Reference = SW17;
+ValeurCmp = SW_PUSH;
+IdModule  = Keyboard:CHERRY_PCB_100H;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3C64
+Path = /57C284AD
+Reference = SW18;
+ValeurCmp = SW_PUSH;
+IdModule  = Keyboard:CHERRY_PCB_100H;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3C6D
+Path = /57C284B9
+Reference = SW19;
+ValeurCmp = SW_PUSH;
+IdModule  = Keyboard:CHERRY_PCB_100H;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3C76
+Path = /57C284C5
+Reference = SW20;
+ValeurCmp = SW_PUSH;
+IdModule  = Keyboard:CHERRY_PCB_100H;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3C7F
+Path = /57C284A3
+Reference = SW21;
+ValeurCmp = SW_PUSH;
+IdModule  = Keyboard:CHERRY_PCB_100H;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3C88
+Path = /57C284AF
+Reference = SW22;
+ValeurCmp = SW_PUSH;
+IdModule  = Keyboard:CHERRY_PCB_100H;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3C91
+Path = /57C284BB
+Reference = SW23;
+ValeurCmp = SW_PUSH;
+IdModule  = Keyboard:CHERRY_PCB_100H;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3C9A
+Path = /57C284C7
+Reference = SW24;
+ValeurCmp = SW_PUSH;
+IdModule  = Keyboard:CHERRY_PCB_100H;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3CD8
+Path = /5843E8F2
+Reference = U1;
+ValeurCmp = MCP23017;
+IdModule  = Housings_DIP:DIP-28_W7.62mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3B88
+Path = /584D47A3
+Reference = SW_DIP1;
+ValeurCmp = DIP3;
+IdModule  = Buttons_Switches_ThroughHole:SW_DIP_x3_Slide;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3BB6
+Path = /584420C7
+Reference = R1;
+ValeurCmp = 10k;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3BBC
+Path = /58442250
+Reference = R2;
+ValeurCmp = 10k;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 584D3BC2
+Path = /584422DB
+Reference = R3;
+ValeurCmp = 10k;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
+EndCmp
+
+BeginCmp
+TimeStamp = 584DDF96
+Path = /584D5500
+Reference = J1;
+ValeurCmp = TRRS;
+IdModule  = ergodox:4pin35mmAudio;
+EndCmp
+
+BeginCmp
+TimeStamp = 584DDFA1
+Path = /584D68E6
+Reference = J2;
+ValeurCmp = TRRS;
+IdModule  = ergodox:4pin35mmAudio;
+EndCmp
+
+BeginCmp
+TimeStamp = 584F5DFA
+Path = /584F6A58
+Reference = C1;
+ValeurCmp = 0.1uF;
+IdModule  = Capacitors_ThroughHole:C_Disc_D6_P5;
+EndCmp
+
+BeginCmp
+TimeStamp = 584F9CAA
+Path = 
+Reference = REF***;
+ValeurCmp = OSHW-Logo2_7.3x6mm_SilkScreen;
+IdModule  = Symbols:OSHW-Logo2_7.3x6mm_SilkScreen;
+EndCmp
+
+BeginCmp
+TimeStamp = 584FA1CD
+Path = /584FBEFA
+Reference = J3;
+ValeurCmp = Test;
+IdModule  = Pin_Headers:Pin_Header_Angled_1x04;
+EndCmp
+
+BeginCmp
+TimeStamp = 58526C03
+Path = /58525DF2
+Reference = SWA1;
+ValeurCmp = SW_PUSH;
+IdModule  = Keyboard:CHERRY_PLATE_200H;
+EndCmp
+
+BeginCmp
+TimeStamp = 58526C1D
+Path = /58526B7B
+Reference = SWA2;
+ValeurCmp = SW_PUSH;
+IdModule  = Keyboard:CHERRY_PLATE_200H;
+EndCmp
+
+BeginCmp
+TimeStamp = 58526C37
+Path = /58526D7F
+Reference = SWA3;
+ValeurCmp = SW_PUSH;
+IdModule  = Keyboard:CHERRY_PLATE_200H;
+EndCmp
+
+BeginCmp
+TimeStamp = 5859E336
+Path = 
+Reference = REF**;
+ValeurCmp = MountingHole_3.2mm_M3;
+IdModule  = Mounting_Holes:MountingHole_3.2mm_M3;
+EndCmp
+
+BeginCmp
+TimeStamp = 5859E33F
+Path = 
+Reference = REF**;
+ValeurCmp = MountingHole_3.2mm_M3;
+IdModule  = Mounting_Holes:MountingHole_3.2mm_M3;
+EndCmp
+
+BeginCmp
+TimeStamp = 5859E34C
+Path = 
+Reference = REF**;
+ValeurCmp = MountingHole_3.2mm_M3;
+IdModule  = Mounting_Holes:MountingHole_3.2mm_M3;
+EndCmp
+
+BeginCmp
+TimeStamp = 5859E354
+Path = 
+Reference = REF**;
+ValeurCmp = MountingHole_3.2mm_M3;
+IdModule  = Mounting_Holes:MountingHole_3.2mm_M3;
+EndCmp
+
+EndListe
